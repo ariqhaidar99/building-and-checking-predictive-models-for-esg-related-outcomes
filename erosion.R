@@ -1,0 +1,16 @@
+getwd()
+list.files()
+options(scipen=9999)
+er <- read.csv("Erosion.csv", stringsAsFactors = T)
+View(er)
+str(er)
+!is.na(er)
+par(mfrow=c(1,1))
+plot(er$vegcover, er$soilloss, col="blue", ylab = "Soil Loss", xlab = "Vegetation Cover", pch = 19)
+#Correlation Test
+cor.test(er$vegcover, er$soilloss)
+er.m1 <- lm(er$soilloss~er$vegcover)
+View(er.m1)
+summary(er.m1)
+# c = Y-intercept = 21.66. m = er$vegcover(x) = -0.18
+abline(lm(er$soilloss~er$vegcover), col="black")

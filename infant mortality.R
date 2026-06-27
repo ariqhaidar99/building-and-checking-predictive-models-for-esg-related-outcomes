@@ -1,0 +1,20 @@
+getwd()
+list.files()
+options(scipen=9999)
+im <- read.csv("InfantMortality.csv", stringsAsFactors = T)
+View(im)
+str(im)
+!is.na(im)
+par(mfrow=c(1,1))
+plot(im$BirthRate, im$IMRate, col="red", ylab = "Infant Mortality Rate", xlab = "Birth Rate", pch = 19)
+im.m1 <- lm(im$BirthRate~im$IMRate)
+summary(im.m1) # Adjusted R Value, 42.14%
+abline(lm(im$BirthRate~im$IMRate), col="black")
+plot(im$PerCapitaIncome, im$IMRate, col="blue", ylab = "Infant Mortality Rate", xlab = "Per Capita Income", pch = 19)
+im.m2 <- lm(im$PerCapitaIncome~im$IMRate)
+summary(im.m2) # Adjusted R Value, 53.99%
+abline(lm(im$PerCapitaIncome~im$IMRate), col="black")
+plot(im$PoponFarms, im$IMRate, col="green", ylab = "Infant Mortality Rate", xlab = "PoponFarms", pch = 19)
+im.m3 <- lm(im$PoponFarms~im$IMRate)
+summary(im.m3) # Adjusted R Value, 46.66%
+abline(lm(im$PoponFarms~im$IMRate), col="black")
