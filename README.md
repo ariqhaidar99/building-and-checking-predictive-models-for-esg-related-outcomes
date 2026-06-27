@@ -1,4 +1,5 @@
 ### ESG Data Analysis: Linear Regression Modelling
+
 ## 🌍 Overview
 This repository contains a collection of R-based predictive modelling scripts. The projects within demonstrate the ability to apply Simple and Multiple Linear Regression to continuous environmental and social datasets. The workflow highlights a robust analytical pipeline: from exploratory correlation to stepwise model selection and thorough residual diagnostics.
 
