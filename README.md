@@ -12,7 +12,7 @@ This repository is broken down into three distinct ESG case studies:
 * **Methodology:** Multiple Linear Regression comparing the predictive power of birth rates, per capita income, and farming populations. Includes stepwise model updating to identify the Minimum Sufficient Model and residual checks for constant variance.
 
 **2. Water Quality: Lower Hafren Catchment**
-* **Script:** `lower hafran.R`
+* **Script:** `lower hafren.R`
 * **Context:** Environmental monitoring of water quality parameters in mid-Wales.
 * **Methodology:** Modelling Dissolved Organic Carbon (DOC) concentrations against continuous explanatory variables (river flow, conductivity, and temperature) using Multiple Linear Regression and pairs plot evaluations.
 
